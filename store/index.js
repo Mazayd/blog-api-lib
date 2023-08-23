@@ -1,5 +1,5 @@
 const store = {
-  baseUrl: "http://localhost:3000",
+  baseUrl: null,
 };
 
 module.exports = store;
