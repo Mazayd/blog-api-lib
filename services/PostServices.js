@@ -57,6 +57,28 @@ class PostServices {
       console.error();
     }
   }
+
+  async deletePost(post_id, telegram_id) {
+    try {
+      const { data } = await axios.delete(
+        `${store.baseUrl}/post/${post_id}/${telegram_id}`
+      );
+      return data;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async likePost(post_id, telegram_id) {
+    try {
+      const { data } = await axios.post(
+        `${store.baseUrl}/likes/post/${post_id}/${telegram_id}`
+      );
+      return data;
+    } catch (err) {
+      console.error(err);
+    }
+  }
 }
 
 module.exports = PostServices;
