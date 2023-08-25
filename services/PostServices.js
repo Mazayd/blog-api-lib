@@ -16,7 +16,16 @@ class PostServices {
 
   async getPostById(id) {
     try {
-      const { data } = await axios.get(`${store.baseUrl}/post/${id}`);
+      const { data } = await axios.get(`${store.baseUrl}/post/one/${id}`);
+      return data;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async getPostByUserTgId(telegram_id) {
+    try {
+      const { data } = await axios.get(`${store.baseUrl}/post/${telegram_id}`);
       return data;
     } catch (err) {
       console.error(err);
