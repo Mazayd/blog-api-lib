@@ -21,6 +21,4 @@ class ApiIntegrationServices {
   }
 }
 
-module.exports = {
-  ApiIntegrationServices,
-};
+module.exports = ApiIntegrationServices;

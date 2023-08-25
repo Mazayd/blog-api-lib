@@ -1,5 +1,3 @@
 const ApiIntegrationServices = require("./services/ApiIntegrationServices");
 
-module.exports = {
-  ApiIntegrationServices,
-};
+module.exports = ApiIntegrationServices;
