@@ -23,6 +23,17 @@ class CommentServices {
     }
   }
 
+  async getCommentById(comment_id) {
+    try {
+      const { data } = await axios.get(
+        `${store.baseUrl}/comment/one/${comment_id}`
+      );
+      return data;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   async updateComment(telegram_id, comment_id, body) {
     try {
       const { data } = await axios.patch(
