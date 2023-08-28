@@ -20,6 +20,15 @@ class UserServices {
     }
   }
 
+  async getUserById(user_id) {
+    try {
+      const { data } = await axios.get(`${store.baseUrl}/user/one/${user_id}`);
+      return data;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   async getUserByTgId(telegramId) {
     try {
       const { data } = await axios.get(
